@@ -88,3 +88,104 @@ body{
     background-position: center center;
     background-size: cover;
 }
+
+/* 共用方塊高度 */
+.box {
+    height: 180px;
+}
+
+/* ====================
+   Roller Top 從上往下
+==================== */
+.roller-t {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-t .rollerbox-t {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(-100%);
+    transition: transform 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roller-t:hover .rollerbox-t {
+    transform: translateY(0);
+}
+
+/* ====================
+   Roller Bottom 從下往上
+==================== */
+.roller-b {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-b .rollerbox-b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateY(100%);
+    transition: transform 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roller-b:hover .rollerbox-b {
+    transform: translateY(0);
+}
+
+/* ====================
+   Roller Left 從左往右
+==================== */
+.roller-l {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-l .rollerbox-l {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateX(-100%);
+    transition: transform 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roller-l:hover .rollerbox-l {
+    transform: translateX(0);
+}
+
+/* ====================
+   Roller Right 從右往左
+==================== */
+.roller-r {
+    position: relative;
+    overflow: hidden;
+}
+
+.roller-r .rollerbox-r {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roller-r:hover .rollerbox-r {
+    transform: translateX(0);
+}
