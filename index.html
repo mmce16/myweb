@@ -336,9 +336,11 @@
         }
 
         .plus {
-            font-size: 24px;
-            font-weight: 300;
-            transition: transform .3s;
+            display: inline-block;
+            font-size: 19px;
+            font-weight: 400;
+            color: var(--color-secondary);
+            transition: transform .3s, color .3s;
         }
 
         .project-more {
@@ -361,7 +363,8 @@
 
         .project-card:hover .plus,
         .project-card:focus-visible .plus {
-            transform: translate(3px, -3px);
+            transform: scale(1.15);
+            color: var(--color-text);
         }
 
         .about {
@@ -639,7 +642,7 @@
                                 <h3 class="project-title">
                                     WHY WE GO
                                 </h3>
-                                <span class="plus" aria-hidden="true">↗</span>
+                                <span class="plus" aria-hidden="true">＋</span>
                             </div>
 
                             <div class="project-more">
@@ -651,7 +654,7 @@
                                     HTML · CSS · BOOTSTRAP
                                 </div>
                                 <div class="tech">
-                                    VIEW PROJECT ↗
+                                    VIEW PROJECT
                                 </div>
                             </div>
                         </div>
@@ -688,7 +691,7 @@
                                 <h3 class="project-title">
                                     AI 全端招生網
                                 </h3>
-                                <span class="plus" aria-hidden="true">↗</span>
+                                <span class="plus" aria-hidden="true">＋</span>
                             </div>
 
                             <div class="project-more">
@@ -697,7 +700,7 @@
                                     整合練習。
                                 </p>
                                 <div class="tech">
-                                    WEB DESIGN · VIEW PROJECT ↗
+                                    WEB DESIGN · VIEW PROJECT
                                 </div>
                             </div>
                         </div>
@@ -730,7 +733,7 @@
                                 <h3 class="project-title">
                                     網頁排版練習
                                 </h3>
-                                <span class="plus" aria-hidden="true">↗</span>
+                                <span class="plus" aria-hidden="true">＋</span>
                             </div>
 
                             <div class="project-more">
@@ -739,7 +742,7 @@
                                     與 CSS 排版。
                                 </p>
                                 <div class="tech">
-                                    HTML · CSS · VIEW PROJECT ↗
+                                    HTML · CSS · VIEW PROJECT
                                 </div>
                             </div>
                         </div>
@@ -772,7 +775,7 @@
                                 <h3 class="project-title">
                                     地方美食資料展示
                                 </h3>
-                                <span class="plus" aria-hidden="true">↗</span>
+                                <span class="plus" aria-hidden="true">＋</span>
                             </div>
 
                             <div class="project-more">
@@ -781,7 +784,7 @@
                                     將地方美食資料呈現在網頁上。
                                 </p>
                                 <div class="tech">
-                                    JAVASCRIPT · VIEW PROJECT ↗
+                                    JAVASCRIPT · VIEW PROJECT
                                 </div>
                             </div>
                         </div>
@@ -822,7 +825,7 @@
                                 <h3 class="project-title">
                                     Table 表格練習
                                 </h3>
-                                <span class="plus" aria-hidden="true">↗</span>
+                                <span class="plus" aria-hidden="true">＋</span>
                             </div>
 
                             <div class="project-more">
@@ -831,7 +834,7 @@
                                     與元件整理資料。
                                 </p>
                                 <div class="tech">
-                                    BOOTSTRAP · VIEW PROJECT ↗
+                                    BOOTSTRAP · VIEW PROJECT
                                 </div>
                             </div>
                         </div>
@@ -875,7 +878,6 @@
 
                 <a class="contact-link" href="mailto:manchinma@gmail.com">
                     EMAIL ME
-                    <span aria-hidden="true">↗</span>
                 </a>
             </section>
 
@@ -883,7 +885,7 @@
 
         <footer>
             <span>© 2026 MA MAN CHIN</span>
-            <a href="#top">BACK TO TOP ↑</a>
+            <a href="#top">BACK TO TOP</a>
         </footer>
 
     </div>
