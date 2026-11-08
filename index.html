@@ -1,19 +1,892 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>學習歷程首頁</title>
-    <link rel="stylesheet" href="css/myall.css">
+    <title>MAN-CHIN | Portfolio</title>
+
+    <style>
+        :root {
+            --color-bg: #FFFFFF;
+            --color-text: #181A1C;
+            --color-secondary: #696F75;
+            --color-muted: #8B9094;
+            --color-border: #E6E7E8;
+            --color-card: #F0F1F2;
+            --color-card-dark: #24282D;
+            --color-white: #FFFFFF;
+            --content-width: 1100px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--color-bg);
+            color: var(--color-text);
+            font-family: Arial, "Noto Sans TC",
+                "PingFang TC", "Microsoft JhengHei", sans-serif;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: calc(100% - 48px);
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            color: var(--color-secondary);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .hero .eyebrow {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-secondary);
+        }
+
+        .hero {
+            padding: 65px 0 60px;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 32px;
+        }
+
+        .hero h1 {
+            margin: 22px 0 0;
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.15;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            max-width: 260px;
+            margin: 0 0 10px;
+            color: var(--color-secondary);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 20px;
+            border-top: 1px solid var(--color-border);
+            padding-top: 26px;
+            margin-bottom: 24px;
+        }
+
+        .section-head h2 {
+            margin: 9px 0 0;
+            font-size: 29px;
+            letter-spacing: -1px;
+        }
+
+        .count {
+            color: var(--color-muted);
+            font-size: 12px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 36px 24px;
+        }
+
+        .project-card {
+            display: block;
+            grid-column: span 2;
+            min-width: 0;
+            background: var(--color-bg);
+        }
+
+        .project-card:focus-visible {
+            outline: 3px solid var(--color-secondary);
+            outline-offset: -3px;
+        }
+
+        .project-art {
+            position: relative;
+            height: 230px;
+            padding: 25px 24px;
+            overflow: hidden;
+        }
+
+        .mini-label {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .art-ski {
+            background: linear-gradient(
+                160deg,
+                #CAD1D5 0%,
+                #87949D 52%,
+                #28343D 100%
+            );
+            color: var(--color-white);
+        }
+
+        .ski-preview {
+            margin-top: 58px;
+        }
+
+        .ski-preview-title {
+            display: block;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -1.3px;
+            line-height: 1.05;
+        }
+
+        .ski-preview-line {
+            width: 55px;
+            height: 2px;
+            background: var(--color-white);
+            margin: 15px 0;
+        }
+
+        .ski-preview-subtitle {
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .art-html {
+            background: #E4E7E9;
+        }
+
+        .mini-title {
+            display: block;
+            margin-top: 36px;
+            font-size: 38px;
+            font-weight: 800;
+            line-height: .96;
+            letter-spacing: -2px;
+        }
+
+        .mini-line {
+            width: 55%;
+            height: 5px;
+            margin-top: 24px;
+            background: #BBC1C5;
+        }
+
+        .mini-line.short {
+            width: 33%;
+            margin-top: 8px;
+        }
+
+        .art-js {
+            background: var(--color-card-dark);
+            color: var(--color-white);
+        }
+
+        .code-preview {
+            margin-top: 42px;
+            font-family: Menlo, Monaco, monospace;
+            font-size: 12px;
+            line-height: 2.1;
+        }
+
+        .code-preview span {
+            color: #B4BDC4;
+        }
+
+        .art-table {
+            background: #D8DCE0;
+        }
+
+        .table-preview {
+            margin-top: 48px;
+            border: 1px solid #9EA5AA;
+        }
+
+        .table-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .table-row i {
+            height: 23px;
+            border-right: 1px solid #9EA5AA;
+            border-bottom: 1px solid #9EA5AA;
+        }
+
+        .table-row i:last-child {
+            border-right: 0;
+        }
+
+        .table-row:last-child i {
+            border-bottom: 0;
+        }
+
+        .table-row:first-child {
+            background: #B3BAC0;
+        }
+
+        .art-website {
+            background: #C7CCD0;
+        }
+
+        .site-preview {
+            margin-top: 38px;
+            padding: 12px;
+            background: var(--color-bg);
+            box-shadow: 0 10px 25px #00000016;
+        }
+
+        .site-nav {
+            height: 6px;
+            width: 65%;
+            background: #999FA4;
+            margin-bottom: 14px;
+        }
+
+        .site-hero {
+            height: 67px;
+            padding: 10px;
+            background: #545C62;
+            color: var(--color-white);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .site-blocks {
+            display: flex;
+            gap: 6px;
+            margin-top: 9px;
+        }
+
+        .site-blocks i {
+            display: block;
+            flex: 1;
+            height: 28px;
+            background: #D1D5D8;
+        }
+
+        .project-info {
+            padding: 20px 0 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .project-no {
+            color: var(--color-secondary);
+            font-size: 10px;
+            letter-spacing: 1.4px;
+        }
+
+        .project-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-title {
+            margin: 9px 0 0;
+            font-size: 21px;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        .plus {
+            font-size: 24px;
+            font-weight: 300;
+            transition: transform .3s;
+        }
+
+        .project-more {
+            margin-top: 12px;
+        }
+
+        .project-more p {
+            margin: 0 0 12px;
+            color: var(--color-secondary);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .tech {
+            color: var(--color-muted);
+            font-size: 10px;
+            letter-spacing: .3px;
+            line-height: 1.7;
+        }
+
+        .project-card:hover .plus,
+        .project-card:focus-visible .plus {
+            transform: translate(3px, -3px);
+        }
+
+        .about {
+            display: flex;
+            justify-content: space-between;
+            gap: 35px;
+            margin: 80px 0 65px;
+            padding-top: 26px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .about h2 {
+            margin: 12px 0;
+            font-size: 30px;
+            letter-spacing: -1px;
+        }
+
+        .about-content {
+            max-width: 500px;
+        }
+
+        .about-content p {
+            margin: 0 0 18px;
+            color: var(--color-secondary);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .skill-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .skill-tags span {
+            border: 1px solid var(--color-border);
+            padding: 7px 10px;
+            font-size: 11px;
+            color: var(--color-secondary);
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            padding: 38px 0 55px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .contact h2 {
+            margin: 12px 0 8px;
+            font-size: clamp(35px, 5vw, 58px);
+            letter-spacing: -2px;
+        }
+
+        .contact p {
+            margin: 0;
+            color: var(--color-secondary);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .contact-link {
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 18px;
+            border-bottom: 1px solid var(--color-text);
+            padding-bottom: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .contact-link:hover {
+            color: var(--color-secondary);
+            border-color: var(--color-secondary);
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 24px 0 32px;
+            border-top: 1px solid var(--color-border);
+            color: var(--color-muted);
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .project-card.featured {
+            grid-column: span 3;
+        }
+
+        .featured .project-art {
+            height: 290px;
+        }
+
+        .featured .ski-preview {
+            margin-top: 45px;
+        }
+
+        .featured .ski-preview-title {
+            font-size: 52px;
+        }
+
+        .featured .site-preview {
+            max-width: 330px;
+            margin: 24px auto 0;
+        }
+
+        .featured .site-hero {
+            height: 95px;
+            padding: 22px;
+            font-size: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .hero-content {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .hero p {
+                max-width: 100%;
+            }
+
+            .hero h1 {
+                letter-spacing: -3px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .project-card,
+            .project-card.featured {
+                grid-column: auto;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .container {
+                width: calc(100% - 36px);
+            }
+
+            .navbar {
+                padding: 20px 0;
+            }
+
+            .nav-links {
+                gap: 14px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: clamp(28px, 8vw, 42px);
+                letter-spacing: -1px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .project-art,
+            .featured .project-art {
+                height: 250px;
+            }
+
+            .about {
+                flex-direction: column;
+                gap: 12px;
+                margin: 62px 0;
+            }
+
+            .contact {
+                flex-direction: column;
+                align-items: start;
+                gap: 25px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="mytitle-01">學習歷程筆記展示</div>
-    <ul>
-        <li><a href="20260923-ex01-AI.html" target="_blank">HTML and CSS排版練習(20260923)</a></li>
-        <li><a href="20260929-javascript.travelfood-ai01.html" target="_blank">JS語法練習</a></li>
-        <li><a href="20261001-bs-table.html" target="_blank">Bootstrap - Table(表格)</a></li>
-        <li><a href="20261027-AI全端招生網.html" target="_blank">AI全端招生網</a></li>
-    </ul>
-    <script src="js/jquery-4.0.0.js"></script>
+    <div class="container" id="top">
+
+        <header class="navbar">
+            <a href="#top" class="brand">MAN-CHIN</a>
+
+            <nav class="nav-links" aria-label="主要導覽">
+                <a href="#work">WORK</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="hero">
+                <div class="eyebrow">
+                    PORTFOLIO / 2026
+                </div>
+
+                <div class="hero-content">
+                    <h1>WEB DESIGN<br>&amp; DEVELOPMENT.</h1>
+
+                    <p>
+                        從想法、版面到互動實作。<br>
+                        持續探索設計與網頁開發的可能，<br>
+                        讓每一次練習成為下一個作品的起點。
+                    </p>
+                </div>
+            </section>
+
+            <section id="work">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">01 / PORTFOLIO</div>
+                        <h2>Selected Projects.</h2>
+                    </div>
+                    <span class="count">01 — 05</span>
+                </div>
+
+                <div class="project-grid">
+
+                    <a class="project-card featured"
+                       href="20261107-ai.html"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <div class="project-art art-ski" aria-hidden="true">
+                            <div class="mini-label">
+                                01 / FEATURED PROJECT
+                            </div>
+
+                            <div class="ski-preview">
+                                <span class="ski-preview-title">
+                                    WHY WE<br>GO
+                                </span>
+                                <div class="ski-preview-line"></div>
+                                <div class="ski-preview-subtitle">
+                                    SKI / TRAVEL / EXPLORE
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-no">
+                                01 / WEBSITE
+                            </div>
+
+                            <div class="project-title-row">
+                                <h3 class="project-title">
+                                    WHY WE GO
+                                </h3>
+                                <span class="plus" aria-hidden="true">↗</span>
+                            </div>
+
+                            <div class="project-more">
+                                <p>
+                                    以滑雪為專題，結合旅行靈感、
+                                    視覺排版與網頁互動的練習網站。
+                                </p>
+                                <div class="tech">
+                                    HTML · CSS · BOOTSTRAP
+                                </div>
+                                <div class="tech">
+                                    VIEW PROJECT ↗
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="project-card featured"
+                       href="20261027-AI全端招生網.html"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <div class="project-art art-website" aria-hidden="true">
+                            <div class="mini-label">
+                                02 / WEB PROJECT
+                            </div>
+
+                            <div class="site-preview">
+                                <div class="site-nav"></div>
+                                <div class="site-hero">
+                                    WEB DESIGN
+                                </div>
+
+                                <div class="site-blocks">
+                                    <i></i><i></i><i></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-no">
+                                02 / WEB PROJECT
+                            </div>
+
+                            <div class="project-title-row">
+                                <h3 class="project-title">
+                                    AI 全端招生網
+                                </h3>
+                                <span class="plus" aria-hidden="true">↗</span>
+                            </div>
+
+                            <div class="project-more">
+                                <p>
+                                    網頁版面與內容配置的
+                                    整合練習。
+                                </p>
+                                <div class="tech">
+                                    WEB DESIGN · VIEW PROJECT ↗
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="project-card"
+                       href="20260923-ex01-AI.html"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <div class="project-art art-html" aria-hidden="true">
+                            <div class="mini-label">
+                                03 / STRUCTURE
+                            </div>
+
+                            <span class="mini-title">
+                                HTML<br>&amp; CSS.
+                            </span>
+
+                            <div class="mini-line"></div>
+                            <div class="mini-line short"></div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-no">
+                                03 / HTML &amp; CSS
+                            </div>
+
+                            <div class="project-title-row">
+                                <h3 class="project-title">
+                                    網頁排版練習
+                                </h3>
+                                <span class="plus" aria-hidden="true">↗</span>
+                            </div>
+
+                            <div class="project-more">
+                                <p>
+                                    練習網頁結構、文字層次
+                                    與 CSS 排版。
+                                </p>
+                                <div class="tech">
+                                    HTML · CSS · VIEW PROJECT ↗
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="project-card"
+                       href="20260929-javascript.travelfood-ai01.html"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <div class="project-art art-js" aria-hidden="true">
+                            <div class="mini-label">
+                                04 / INTERACTION
+                            </div>
+
+                            <div class="code-preview">
+                                <span>const</span> idea = {<br>
+                                &nbsp;&nbsp;learn: true,<br>
+                                &nbsp;&nbsp;build: "web"<br>
+                                };
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-no">
+                                04 / JAVASCRIPT
+                            </div>
+
+                            <div class="project-title-row">
+                                <h3 class="project-title">
+                                    地方美食資料展示
+                                </h3>
+                                <span class="plus" aria-hidden="true">↗</span>
+                            </div>
+
+                            <div class="project-more">
+                                <p>
+                                    練習使用 JavaScript，
+                                    將地方美食資料呈現在網頁上。
+                                </p>
+                                <div class="tech">
+                                    JAVASCRIPT · VIEW PROJECT ↗
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="project-card"
+                       href="20261001-bs-table.html"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <div class="project-art art-table" aria-hidden="true">
+                            <div class="mini-label">
+                                05 / COMPONENT
+                            </div>
+
+                            <div class="table-preview">
+                                <div class="table-row">
+                                    <i></i><i></i><i></i>
+                                </div>
+                                <div class="table-row">
+                                    <i></i><i></i><i></i>
+                                </div>
+                                <div class="table-row">
+                                    <i></i><i></i><i></i>
+                                </div>
+                                <div class="table-row">
+                                    <i></i><i></i><i></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-no">
+                                05 / BOOTSTRAP
+                            </div>
+
+                            <div class="project-title-row">
+                                <h3 class="project-title">
+                                    Table 表格練習
+                                </h3>
+                                <span class="plus" aria-hidden="true">↗</span>
+                            </div>
+
+                            <div class="project-more">
+                                <p>
+                                    使用 Bootstrap 的表格樣式
+                                    與元件整理資料。
+                                </p>
+                                <div class="tech">
+                                    BOOTSTRAP · VIEW PROJECT ↗
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <section class="about" id="about">
+                <div>
+                    <div class="eyebrow">02 / ABOUT</div>
+                    <h2>Always learning.</h2>
+                </div>
+
+                <div class="about-content">
+                    <p>
+                        記錄網頁設計與開發的學習過程，
+                        從小練習開始，慢慢累積自己的作品。
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                        <span>jQuery</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact" id="contact">
+                <div>
+                    <div class="eyebrow">03 / CONTACT</div>
+                    <h2>Let's connect.</h2>
+
+                    <p>
+                        想聊聊網頁、作品或學習心得？
+                        歡迎與我聯繫。
+                    </p>
+                </div>
+
+                <a class="contact-link" href="mailto:manchinma@gmail.com">
+                    EMAIL ME
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </section>
+
+        </main>
+
+        <footer>
+            <span>© 2026 MA MAN CHIN</span>
+            <a href="#top">BACK TO TOP ↑</a>
+        </footer>
+
+    </div>
 </body>
+
 </html>
