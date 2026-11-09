@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
     <style>
         :root {
             --cream: #F7F4ED;
@@ -21,52 +20,40 @@
             --footer: #294657;
             --text: #536764;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             margin: 0;
             font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-            color: var(--forest);
-            background-color: var(--white);
+            color: var(--forest); background-color: var(--white);
             line-height: 1.8;
         }
-
         img {
             max-width: 100%;
         }
-
         a {
             color: inherit;
         }
-
         button {
             font: inherit;
         }
-
         section {
             scroll-margin-top: 24px;
         }
-
         .chapter {
             padding: 76px 0;
         }
-
         .cream {
             background-color: var(--cream);
         }
-
         .sea {
             background-color: var(--sea);
         }
-
         .ink {
             background-color: var(--forest);
             color: var(--white);
         }
-
         .section-kicker {
             color: #886A4D;
             font-size: 12px;
@@ -74,32 +61,26 @@
             letter-spacing: 2px;
             margin-bottom: 20px;
         }
-
         .ink .section-kicker {
             color: #E0BE9C;
         }
-
         .section-title {
             font-size: clamp(30px, 3.5vw, 50px);
             font-weight: 700;
             line-height: 1.4;
             margin-bottom: 22px;
         }
-
         .section-copy {
             color: var(--text);
             font-size: 16px;
             line-height: 2;
         }
-
         .ink .section-copy {
             color: #D1DEDA;
         }
-
         .section-heading-row {
             margin-bottom: 32px;
         }
-
         .line-link {
             display: inline-flex;
             align-items: center;
@@ -111,21 +92,17 @@
             font-size: 14px;
             transition: color 0.3s, gap 0.3s;
         }
-
         .line-link:hover {
             color: #98704B;
             gap: 32px;
         }
-
         .ink .line-link:hover {
             color: #E0BE9C;
         }
-
         .photo-frame {
             overflow: hidden;
             background-color: var(--stone);
         }
-
         .photo-frame img {
             display: block;
             width: 100%;
@@ -133,11 +110,9 @@
             object-fit: cover;
             transition: transform 0.6s ease;
         }
-
         .photo-frame:hover img {
             transform: scale(1.045);
         }
-
         .photo-caption {
             margin-top: 12px;
             margin-bottom: 0;
@@ -145,20 +120,17 @@
             font-size: 11px;
             letter-spacing: 2px;
         }
-
         a:focus-visible,
         button:focus-visible,
         summary:focus-visible {
             outline: 3px solid var(--gold);
             outline-offset: 5px;
         }
-
         @media (min-width: 1200px) {
             .container {
                 max-width: 1100px;
             }
         }
-
         .navbar {
             position: absolute;
             top: 0;
@@ -169,38 +141,31 @@
             background-color: rgba(0, 0, 0, 0.15);
             border-bottom: 1px solid rgba(255, 255, 255, 0.18);
         }
-
         .navbar-brand,
         .navbar-brand:hover {
             color: white;
         }
-
         .navbar-brand {
             font-size: 26px;
             font-weight: 700;
             letter-spacing: 2px;
             line-height: 1;
         }
-
         .navbar .navbar-nav {
             flex-direction: row;
             align-items: center;
             gap: 24px;
         }
-
         .navbar .nav-link {
             color: white;
             font-size: 14px;
         }
-
         .navbar .nav-link:hover {
             color: #E0BE9C;
         }
-
         .navbar .dropdown {
             position: relative;
         }
-
         .navbar .dropdown-menu {
             position: absolute;
             right: 0;
@@ -212,19 +177,16 @@
             backdrop-filter: blur(9px);
             -webkit-backdrop-filter: blur(9px);
         }
-
         .navbar .dropdown-item {
             padding: 9px 12px;
             color: white;
             font-size: 14px;
         }
-
         .navbar .dropdown-item:hover,
         .navbar .dropdown-item:focus {
             color: white;
             background-color: rgba(255, 255, 255, 0.12);
         }
-
         #s01 .carousel-item {
             position: relative;
             height: 100vh;
@@ -234,7 +196,6 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-
         #s01 .carousel-item::before {
             content: "";
             position: absolute;
@@ -242,7 +203,6 @@
             background: linear-gradient(90deg, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.08) 80%), linear-gradient(0deg, rgba(0, 0, 0, 0.45), transparent 65%);
             pointer-events: none;
         }
-
         #s01 .carousel-caption {
             left: 10%;
             right: 10%;
@@ -250,13 +210,11 @@
             padding: 0;
             text-align: left;
         }
-
         #s01 .slide-subtitle {
             margin-bottom: 20px;
             font-size: 13px;
             letter-spacing: 3px;
         }
-
         #s01 .slide-title {
             max-width: 850px;
             margin-bottom: 20px;
@@ -265,13 +223,11 @@
             line-height: 1.3;
             text-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
         }
-
         #s01 .slide-description {
             margin-bottom: 28px;
             font-size: 17px;
             line-height: 1.8;
         }
-
         #s01 .hero-link {
             display: inline-flex;
             align-items: center;
@@ -283,27 +239,22 @@
             font-size: 14px;
             transition: gap 0.3s, color 0.3s;
         }
-
         #s01 .hero-link:hover {
             gap: 40px;
             color: #E0BE9C;
         }
-
         #s01 .carousel-control-prev,
         #s01 .carousel-control-next {
             width: 7%;
         }
-
         #s01 .carousel-indicators {
             margin-bottom: 30px;
         }
-
         #s01 .carousel-indicators button {
             width: 28px;
             height: 3px;
             margin: 0 5px;
         }
-
         .hero-bottom-note {
             position: absolute;
             right: 5%;
@@ -314,28 +265,23 @@
             font-size: 10px;
             letter-spacing: 2px;
         }
-
         #s02 {
             padding: 72px 0;
         }
-
         #s02 .intro-lead {
             max-width: 570px;
             font-size: 22px;
             line-height: 1.9;
         }
-
         #s02 .intro-note {
             color: #6D776F;
             font-size: 14px;
             line-height: 1.9;
             margin-bottom: 0;
         }
-
         #s03 {
             padding: 65px 0 76px;
         }
-
         .interest-card {
             position: relative;
             display: block;
@@ -345,14 +291,12 @@
             text-decoration: none;
             background-color: var(--forest);
         }
-
         .interest-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.6s ease;
         }
-
         .interest-card::after {
             content: "";
             position: absolute;
@@ -360,15 +304,12 @@
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent 80%);
             pointer-events: none;
         }
-
         .interest-card:hover img {
             transform: scale(1.07);
         }
-
         .interest-card:hover {
             color: white;
         }
-
         .interest-content {
             position: absolute;
             left: 22px;
@@ -376,40 +317,33 @@
             bottom: 23px;
             z-index: 1;
         }
-
         .interest-content small {
             display: block;
             margin-bottom: 9px;
             font-size: 11px;
             letter-spacing: 2px;
         }
-
         .interest-content h3 {
             margin-bottom: 0;
             font-size: 24px;
             font-weight: 600;
         }
-
         .interest-arrow {
             position: absolute;
             right: 0;
             bottom: 0;
-            font-size: 25px;
+            font-size: 16px;
             transition: transform 0.3s;
         }
-
         .interest-card:hover .interest-arrow {
-            transform: translate(3px, -3px);
+             transform: translateY(3px);
         }
-
         #s04 {
             background-color: var(--stone);
         }
-
         #s04 .food-photo {
             height: 460px;
         }
-
         #s04 .food-note {
             padding: 20px 0 0;
             margin-top: 26px;
@@ -418,7 +352,6 @@
             font-size: 14px;
             line-height: 1.9;
         }
-
         #s05 {
             position: relative;
             min-height: 540px;
@@ -428,15 +361,12 @@
             color: white;
             background: linear-gradient(90deg, rgba(5, 26, 36, 0.8), rgba(5, 26, 36, 0.1)), url("images/whywego/diving.jpg") center / cover no-repeat;
         }
-
         #s05 .section-kicker {
             color: #D0E4E8;
         }
-
         #s05 .section-title {
             font-size: clamp(34px, 4vw, 58px);
         }
-
         #s05 .ocean-copy {
             max-width: 380px;
             margin-bottom: 24px;
@@ -444,7 +374,6 @@
             font-size: 16px;
             line-height: 2;
         }
-
         .ocean-toggle {
             padding: 8px 0;
             color: white;
@@ -454,11 +383,9 @@
             font-size: 14px;
             text-align: left;
         }
-
         .ocean-toggle:hover {
             color: #E0BE9C;
         }
-
         .ocean-info {
             max-width: 450px;
             padding: 20px;
@@ -466,31 +393,25 @@
             background: rgba(5, 26, 36, 0.75);
             border-left: 2px solid #AECBD2;
         }
-
         .ocean-info p {
             margin: 0;
             color: #E2ECEE;
             font-size: 14px;
             line-height: 1.9;
         }
-
         #s06 .music-photo {
             height: 390px;
         }
-
         #s07 {
             padding-top: 0;
         }
-
         #s07 .culture-layout {
             border-top: 1px solid #D5DCD7;
             padding-top: 65px;
         }
-
         #s07 .culture-photo {
             height: 350px;
         }
-
         .culture-note {
             margin-top: 22px;
             margin-bottom: 0;
@@ -498,7 +419,6 @@
             font-size: 13px;
             letter-spacing: 1px;
         }
-
         #s08 {
             position: relative;
             display: flex;
@@ -508,18 +428,15 @@
             color: white;
             background: linear-gradient(90deg, rgba(10, 24, 28, 0.68), rgba(10, 24, 28, 0.1)), url("images/whywego/ski2.jpg") center / cover no-repeat;
         }
-
         #s08 .section-kicker {
             color: #E5D1B7;
         }
-
         #s08 .ski-feature-title {
             margin-bottom: 22px;
             font-size: clamp(44px, 6vw, 82px);
             font-weight: 700;
             line-height: 1.2;
         }
-
         #s08 .ski-feature-copy {
             max-width: 430px;
             margin-bottom: 28px;
@@ -527,11 +444,9 @@
             font-size: 17px;
             line-height: 2;
         }
-
         #s08 .line-link:hover {
             color: #E0BE9C;
         }
-
         #s08 .ski-signature {
             margin: 0;
             color: #F0D6B8;
@@ -541,7 +456,6 @@
             line-height: 1.2;
             text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
         }
-
         #s08 .ski-signature-note {
             margin-top: 12px;
             margin-bottom: 0;
@@ -549,7 +463,6 @@
             font-size: 12px;
             letter-spacing: 2px;
         }
-
         .ski-choice {
             height: 100%;
             padding: 25px 22px;
@@ -557,31 +470,26 @@
             background-color: rgba(255, 255, 255, 0.45);
             transition: background-color 0.3s, transform 0.3s;
         }
-
         .ski-choice:hover {
             background-color: white;
             transform: translateY(-5px);
         }
-
         .ski-choice small {
             color: #886A4D;
             font-size: 12px;
             letter-spacing: 2px;
         }
-
         .ski-choice h3 {
             margin: 22px 0 15px;
             font-size: 25px;
             font-weight: 600;
         }
-
         .ski-choice p {
             min-height: 96px;
             color: var(--text);
             font-size: 15px;
             line-height: 1.9;
         }
-
         .choice-toggle {
             display: inline-flex;
             align-items: center;
@@ -595,45 +503,37 @@
             text-align: left;
             font-size: 13px;
         }
-
         .choice-toggle span {
             margin-left: auto;
             transition: transform 0.3s;
         }
-
         .choice-toggle[aria-expanded="true"] span {
             transform: rotate(45deg);
         }
-
         .choice-detail {
             margin-top: 17px;
             color: #596D63;
             font-size: 14px;
             line-height: 1.9;
         }
-
         #s10 .day-photo {
             width: 100%;
             max-width: 390px;
             height: 520px;
         }
-
         .timeline {
             border-left: 1px solid #9BAEA7;
             margin-left: 12px;
             padding-left: 35px;
         }
-
         .timeline-item {
             position: relative;
             padding-bottom: 32px;
             --animate-duration: 0.8s;
         }
-
         .timeline-item:last-child {
             padding-bottom: 0;
         }
-
         .timeline-item::before {
             content: "";
             position: absolute;
@@ -645,94 +545,78 @@
             border-radius: 50%;
             background-color: #8A6B49;
         }
-
         .timeline-item small {
             color: #886A4D;
             font-size: 12px;
             letter-spacing: 2px;
         }
-
         .timeline-item h3 {
             margin: 8px 0 10px;
             font-size: 23px;
             font-weight: 600;
         }
-
         .timeline-item p {
             margin-bottom: 0;
             color: var(--text);
             font-size: 15px;
             line-height: 1.9;
         }
-
         .faq-item {
             padding: 22px 0;
             border-bottom: 1px solid #B8C6C1;
         }
-
         .faq-item:first-child {
             border-top: 1px solid #B8C6C1;
         }
-
         .faq-item summary {
             padding-right: 12px;
             font-size: 18px;
             font-weight: 500;
             cursor: pointer;
         }
-
         .faq-item summary:hover {
             color: #886A4D;
         }
-
         .faq-item p {
             margin: 16px 0 0;
             color: var(--text);
             font-size: 15px;
             line-height: 1.9;
         }
-
         .faq-note {
             margin-top: 25px;
             color: #687870;
             font-size: 13px;
             line-height: 1.9;
         }
-
         #s12 .mountain-photo {
             height: 470px;
         }
-
         .mountain-item {
             padding: 18px 0;
             border-top: 1px solid #4F6963;
         }
-
         .mountain-item small {
             color: #D7B593;
             font-size: 11px;
             letter-spacing: 2px;
         }
-
         .mountain-item h3 {
             margin: 8px 0;
             font-size: 22px;
         }
-
         .mountain-item p {
             margin-bottom: 0;
             color: #CFDCD6;
             font-size: 14px;
             line-height: 1.9;
         }
-
         .season-photo-card {
             position: relative;
             height: 380px;
             overflow: hidden;
             background-color: var(--forest);
         }
-
         .season-photo-card img {
             position: absolute;
             width: 100%;
@@ -740,11 +624,9 @@
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-
         .season-photo-card:hover img {
             transform: scale(1.06);
         }
-
         .season-photo-card::before {
             content: "";
             position: absolute;
@@ -753,7 +635,6 @@
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent 75%);
             pointer-events: none;
         }
-
         .season-photo-content {
             position: absolute;
             left: 0;
@@ -764,7 +645,6 @@
             color: white;
             background-color: rgba(14, 30, 31, 0.8);
         }
-
         .season-toggle {
             display: flex;
             align-items: center;
@@ -778,48 +658,39 @@
             text-align: left;
             cursor: pointer;
         }
-
         .season-toggle small {
             display: block;
             margin-bottom: 8px;
             font-size: 10px;
             letter-spacing: 2px;
         }
-
         .season-toggle strong {
             display: block;
             font-size: 20px;
             font-weight: 600;
         }
-
         .season-toggle .season-plus {
             font-size: 23px;
             transition: transform 0.3s;
         }
-
         .season-toggle[aria-expanded="true"] .season-plus {
             transform: rotate(45deg);
         }
-
         .season-description {
             margin: 15px 0 0;
             color: #E4ECE8;
             font-size: 14px;
             line-height: 1.9;
         }
-
         #s14 {
             background-color: var(--stone);
         }
-
         .reason-list {
             border-top: 1px solid #B8B6A9;
         }
-
         .reason-item {
             border-bottom: 1px solid #B8B6A9;
         }
-
         .reason-toggle {
             display: flex;
             align-items: center;
@@ -831,36 +702,29 @@
             background: transparent;
             text-align: left;
         }
-
         .reason-number {
             color: #886A4D;
             font-size: 12px;
             letter-spacing: 1px;
         }
-
         .reason-title {
             font-size: 21px;
             font-weight: 500;
         }
-
         .reason-plus {
             margin-left: auto;
             font-size: 24px;
             transition: transform 0.3s;
         }
-
         .reason-toggle[aria-expanded="true"] .reason-plus {
             transform: rotate(45deg);
         }
-
         .reason-toggle:hover .reason-title {
             color: #886A4D;
         }
-
         .reason-detail {
             padding: 0 0 24px 38px;
         }
-
         .reason-detail p {
             max-width: 530px;
             margin-bottom: 12px;
@@ -868,25 +732,20 @@
             font-size: 15px;
             line-height: 1.9;
         }
-
         #s15 {
             padding: 65px 0 0;
             color: white;
             background-color: var(--footer);
         }
-
         #s15 .section-kicker {
             color: #D6B895;
         }
-
         #s15 .line-link {
             color: white;
         }
-
         #s15 .line-link:hover {
             color: #E0BE9C;
         }
-
         .closing-title {
             margin-bottom: 20px;
             font-family: Georgia, "Times New Roman", serif;
@@ -894,46 +753,38 @@
             font-weight: 400;
             line-height: 1.3;
         }
-
         .closing-title em {
             color: #D6B895;
             font-weight: 400;
         }
-
         .closing-copy {
             color: #D0DCE0;
             font-size: 15px;
         }
-
         .footer-gallery {
             margin-top: 34px;
             margin-bottom: 36px;
         }
-
         .footer-gallery a {
             display: block;
             height: 140px;
             overflow: hidden;
             background-color: #203B3C;
         }
-
         .footer-gallery img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s, opacity 0.5s;
         }
-
         .footer-gallery a:hover img {
             transform: scale(1.08);
             opacity: 0.8;
         }
-
         .site-footer {
             padding: 30px 0 24px;
             border-top: 1px solid #617887;
         }
-
         .footer-social {
             display: flex;
             justify-content: center;
@@ -941,49 +792,41 @@
             gap: 38px;
             margin-bottom: 28px;
         }
-
         .footer-social span {
             display: inline-flex;
             align-items: center;
             justify-content: center;
         }
-
         .footer-social i {
             color: #D8E2E6;
             font-size: 24px;
             transition: color 0.3s, transform 0.3s;
         }
-
         .footer-social span:hover i {
             color: #E0BE9C;
             transform: translateY(-3px);
         }
-
         .footer-brand {
             margin-bottom: 0;
             font-size: 17px;
             font-weight: 700;
             letter-spacing: 2px;
         }
-
         .footer-copyright {
             margin-bottom: 0;
             color: #C1D0D7;
             font-size: 11px;
             letter-spacing: 1px;
         }
-
         .back-top {
             color: #DCE5E9;
             text-decoration: none;
             font-size: 12px;
             letter-spacing: 1px;
         }
-
         .back-top:hover {
             color: #E0BE9C;
         }
-
         @media (min-width: 992px) {
             #s10 .day-photo-column {
                 position: sticky;
@@ -991,212 +834,160 @@
                 align-self: flex-start;
             }
         }
-
         @media (max-width: 991px) {
             .interest-card {
                 height: 280px;
             }
-
             #s04 .food-photo {
                 height: 370px;
             }
-
             #s12 .mountain-photo {
                 height: 360px;
             }
-
             .ski-choice p {
                 min-height: auto;
             }
-
             #s08 .ski-signature {
                 margin-top: 15px;
             }
-
             #s10 .day-photo {
                 max-width: none;
                 height: 300px;
             }
-
             #s10 .day-photo img {
                 object-position: center 60%;
             }
         }
-
         @media (max-width: 767px) {
             .chapter {
                 padding: 54px 0;
             }
-
             .section-title {
                 font-size: 31px;
             }
-
             .section-heading-row {
                 margin-bottom: 25px;
             }
-
             .section-copy {
                 font-size: 15px;
             }
-
             .navbar {
                 padding: 20px 0;
             }
-
             .navbar-brand {
                 font-size: 20px;
                 letter-spacing: 1px;
             }
-
             .navbar .navbar-nav {
                 gap: 12px;
             }
-
             .navbar .nav-link {
                 font-size: 12px;
             }
-
             #s01 .carousel-item {
                 min-height: 570px;
             }
-
             #s01 .carousel-caption {
                 left: 11%;
                 right: 11%;
                 bottom: 19%;
             }
-
             #s01 .slide-title {
                 font-size: 36px;
             }
-
             #s01 .slide-description {
                 font-size: 15px;
             }
-
             #s01 .slide-subtitle {
                 font-size: 12px;
                 margin-bottom: 16px;
             }
-
             #s01 .hero-link {
                 font-size: 13px;
             }
-
             .hero-bottom-note {
                 display: none;
             }
-
             #s02 {
                 padding: 52px 0;
             }
-
             #s02 .intro-lead {
                 font-size: 19px;
             }
-
             #s03 {
                 padding: 50px 0;
             }
-
             .interest-card {
                 height: 240px;
             }
-
             .interest-content {
                 left: 16px;
                 right: 16px;
                 bottom: 18px;
             }
-
             .interest-content h3 {
                 font-size: 21px;
             }
-
             .interest-content small {
                 font-size: 9px;
                 letter-spacing: 1px;
             }
-
-            .interest-arrow {
-                font-size: 20px;
-            }
-
             #s04 .food-photo {
                 height: 310px;
             }
-
             #s05 {
                 min-height: 490px;
                 padding: 65px 0;
             }
-
             #s06 .music-photo {
                 height: 290px;
             }
-
             #s07 .culture-layout {
                 padding-top: 45px;
             }
-
             #s07 .culture-photo {
                 height: 290px;
             }
-
             #s08 {
                 min-height: 500px;
                 padding: 75px 0;
             }
-
             #s08 .ski-feature-title {
                 font-size: 49px;
             }
-
             #s08 .ski-feature-copy {
                 font-size: 15px;
             }
-
             #s08 .ski-signature {
                 font-size: 44px;
             }
-
             #s10 .day-photo {
                 height: 240px;
             }
-
             .season-photo-card {
                 height: 340px;
             }
-
             .reason-title {
                 font-size: 18px;
             }
-
             .reason-toggle {
                 gap: 14px;
             }
-
             .reason-detail {
                 padding-left: 30px;
             }
-
             #s15 {
                 padding-top: 50px;
             }
-
             .footer-gallery a {
                 height: 110px;
             }
-
             .closing-title {
                 font-size: 35px;
             }
-
             .footer-social {
                 gap: 32px;
             }
-
             .footer-social i {
                 font-size: 23px;
             }
@@ -1208,18 +999,15 @@
     <nav class="navbar navbar-expand-lg" aria-label="主要導覽">
         <div class="container-fluid px-4 px-lg-5">
             <a class="navbar-brand" href="#s01">WHY WE GO</a>
-
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item d-none d-md-block">
                     <a class="nav-link" href="#s08">本期專題：雪山生活</a>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         探索更多
                     </a>
-
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#s02">我們為何出發</a></li>
                         <li><a class="dropdown-item" href="#s03">找到你的熱愛</a></li>
@@ -1239,7 +1027,6 @@
     <main>
         <section id="s01" aria-label="旅行靈感輪播">
             <div id="heroCarousel" class="carousel slide" data-bs-interval="false">
-
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="滑雪"></button>
@@ -1252,7 +1039,6 @@
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"
                         aria-label="文化節慶"></button>
                 </div>
-
                 <div class="carousel-inner">
                     <div class="carousel-item active"
                         style="background-image: url('images/whywego/ski1.jpg');">
@@ -1265,7 +1051,6 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="carousel-item"
                         style="background-image: url('images/whywego/diving.jpg');">
                         <div class="carousel-caption">
@@ -1277,7 +1062,6 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="carousel-item"
                         style="background-image: url('images/whywego/market.jpg');">
                         <div class="carousel-caption">
@@ -1289,19 +1073,17 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="carousel-item"
                         style="background-image: url('images/whywego/tomorrowland.jpg');">
                         <div class="carousel-caption">
                             <p class="slide-subtitle">04 / 音樂與現場</p>
-                            <h2 class="slide-title">為了那首歌，<br>去有你的現場。</h2>
-                            <p class="slide-description">為喜歡的聲音，去一座原本陌生的城市。</p>
+                            <h2 class="slide-title">為了心中的節拍，<br>奔向沸騰的人海。</h2>
+                            <p class="slide-description">把耳機裡的音樂，變成一趟期待已久的旅行。</p>
                             <a href="#s06" class="hero-link">
                                 奔赴現場 <span aria-hidden="true">↗</span>
                             </a>
                         </div>
                     </div>
-
                     <div class="carousel-item"
                         style="background-image: url('images/whywego/festival.jpg');">
                         <div class="carousel-caption">
@@ -1314,13 +1096,11 @@
                         </div>
                     </div>
                 </div>
-
                 <button class="carousel-control-prev" type="button"
                     data-bs-target="#heroCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">上一張</span>
                 </button>
-
                 <button class="carousel-control-next" type="button"
                     data-bs-target="#heroCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -1338,15 +1118,12 @@
                         <p class="section-kicker">02 / THE REASON WE GO</p>
                         <h2 class="section-title mb-lg-0">先有了嚮往，<br>才有了目的地。</h2>
                     </div>
-
                     <div class="col-lg-6 offset-lg-1">
                         <p class="intro-lead">
-                            一場雪、一片海、一口想念的味道，<br class="d-none d-lg-block">
-                            或是一場等待已久的演出。
+                            一場雪、一片海、一口想念的味道，<br class="d-none d-lg-block">或是一場等待已久的演出。
                         </p>
                         <p class="intro-note">
-                            WHY WE GO 收集讓人願意出發的理由。<br>
-                            從你喜歡的事開始，發現原本沒想過的風景。
+                            WHY WE GO 收集讓人願意出發的理由。<br>從你喜歡的事開始，發現原本沒想過的風景。
                         </p>
                     </div>
                 </div>
@@ -1362,10 +1139,9 @@
                     </div>
 
                     <div class="col-lg-5">
-                        <p class="section-copy mb-0">選一個心動的方向，往下探索。</p>
+                        <p class="section-copy mb-0">選一個心動的方向，一起探索。</p>
                     </div>
                 </div>
-
                 <div class="row g-3">
                     <div class="col-6 col-lg-3">
                         <a href="#s08" class="interest-card">
@@ -1373,7 +1149,7 @@
                             <div class="interest-content">
                                 <small>SNOW &amp; MOUNTAINS</small>
                                 <h3>一場雪</h3>
-                                <span class="interest-arrow" aria-hidden="true">↗</span>
+                                <i class="fa-solid fa-chevron-down interest-arrow" aria-hidden="true"></i>
                             </div>
                         </a>
                     </div>
@@ -1384,7 +1160,7 @@
                             <div class="interest-content">
                                 <small>INTO THE BLUE</small>
                                 <h3>一片海</h3>
-                                <span class="interest-arrow" aria-hidden="true">↗</span>
+                                <i class="fa-solid fa-chevron-down interest-arrow" aria-hidden="true"></i>
                             </div>
                         </a>
                     </div>
@@ -1395,7 +1171,7 @@
                             <div class="interest-content">
                                 <small>A TASTE OF PLACE</small>
                                 <h3>一口味道</h3>
-                                <span class="interest-arrow" aria-hidden="true">↗</span>
+                                <i class="fa-solid fa-chevron-down interest-arrow" aria-hidden="true"></i>
                             </div>
                         </a>
                     </div>
@@ -1406,7 +1182,7 @@
                             <div class="interest-content">
                                 <small>LIVE IN THE MOMENT</small>
                                 <h3>一場演出</h3>
-                                <span class="interest-arrow" aria-hidden="true">↗</span>
+                                <i class="fa-solid fa-chevron-down interest-arrow" aria-hidden="true"></i>
                             </div>
                         </a>
                     </div>
@@ -1428,10 +1204,7 @@
                         <p class="section-kicker">04 / 城市的味道</p>
                         <h2 class="section-title">從一碗麵，<br>認識一座城。</h2>
                         <p class="section-copy">
-                            如果為了一碗南投意麵出發，
-                            那一天就不必從景點清單開始。
-                            找間小店坐下來，吃完再沿著街道散步，
-                            看看市場、老屋，以及人們生活的樣子。
+                            如果為了一碗南投意麵出發，那一天就不必從景點清單開始。找間小店坐下來，吃完再沿著街道散步，看看市場、老屋，以及人們生活的樣子。
                         </p>
                         <a href="https://www.taiwan.net.tw/m1.aspx?sno=0000072"
                             target="_blank" rel="noopener noreferrer" class="line-link">
@@ -1439,8 +1212,7 @@
                         </a>
                         <p class="food-note">
                             一個小提案：<br>
-                            留一餐給最想吃的店，
-                            也留一點胃口給路上的偶然發現。
+                            留一餐給最想吃的店，也留一點胃口給路上的偶然發現。
                         </p>
                     </div>
                 </div>
@@ -1455,23 +1227,17 @@
                         <h2 class="section-title">為了一片海，<br>把世界調成靜音。</h2>
                         <p class="ocean-copy">
                             水面之下，熟悉的喧鬧漸漸遠去。<br>
-                            留下呼吸、光線，
-                            和第一次看見這個世界的好奇。
+                            留下呼吸、光線，和第一次看見這個世界的好奇。
                         </p>
-
                         <button class="ocean-toggle" type="button"
                             data-bs-toggle="collapse" data-bs-target="#oceanInfo"
                             aria-expanded="false" aria-controls="oceanInfo">
                             第一次接近海洋，可以從哪裡開始？ ＋
                         </button>
-
                         <div class="collapse" id="oceanInfo">
                             <div class="ocean-info">
                                 <p>
-                                    先想想你想體驗的是岸邊觀察、浮潛，還是水肺潛水，
-                                    再向合格業者了解課程與參與條件。
-                                    也可以先安排一天海邊生活，
-                                    不必急著一次挑戰所有事情。
+                                    先想想你想體驗的是岸邊觀察、浮潛，還是水肺潛水，再向合格業者了解課程與參與條件。也可以先安排一天海邊生活， 不必急著一次挑戰所有事情。
                                 </p>
                             </div>
                         </div>
@@ -1485,19 +1251,15 @@
                 <div class="row align-items-center g-4 g-lg-5">
                     <div class="col-lg-5">
                         <p class="section-kicker">06 / 音樂與現場</p>
-                        <h2 class="section-title">耳機裡的聲音，<br>終於來到眼前。</h2>
+                        <h2 class="section-title">讓身體跟著節奏，<br>把這一刻留給音樂。</h2>
                         <p class="section-copy">
-                            行程先留給那場演出，
-                            再慢慢安排城市裡的其他時間。
-                            下午逛唱片行、吃一頓喜歡的晚餐，
-                            晚上和陌生人一起唱熟悉的歌。
+                            為喜歡的 DJ 留下時間，也讓陌生的旋律帶來驚喜。<br>從白天跳到夜晚，在舞台與人群之間，找到屬於自己的節奏。
                         </p>
                         <a href="https://www.tomorrowland.com/" target="_blank"
                             rel="noopener noreferrer" class="line-link">
                             探索 Tomorrowland <span aria-hidden="true">↗</span>
                         </a>
                     </div>
-
                     <div class="col-lg-6 offset-lg-1">
                         <div class="photo-frame music-photo">
                             <img src="images/whywego/tomorrowland.jpg"
@@ -1520,15 +1282,11 @@
                             </div>
                             <p class="photo-caption">MEXICO / DÍA DE MUERTOS</p>
                         </div>
-
                         <div class="col-lg-5 offset-lg-1">
                             <p class="section-kicker">07 / 文化與節慶</p>
                             <h2 class="section-title">熱鬧之外，<br>還有值得理解的事。</h2>
                             <p class="section-copy">
-                                服飾、音樂與街上的色彩，
-                                都可能連著一段地方故事。
-                                出發前先了解節慶的意義，
-                                到了現場，為觀察與聆聽多留一點時間。
+                                服飾、音樂與街上的色彩，都可能連著一段地方故事。<br>出發前先了解節慶的意義，到了現場，為觀察與聆聽多留一點時間。
                             </p>
                             <a href="https://visitmexico.com/es/recomendacion/destino/40/18054/escartelera-dia-de-muertosenday-of-the-dead-events-lineup"
                                 target="_blank" rel="noopener noreferrer" class="line-link">
@@ -1549,14 +1307,12 @@
                         <h2 class="ski-feature-title">把幾天，<br>交給山。</h2>
                         <p class="ski-feature-copy">
                             早上搭上纜車，下午沿著雪道滑下。<br>
-                            當生活開始跟著天光與雪況移動，
-                            一天也有了不同的模樣。
+                            當生活開始跟著天光與雪況移動，一天也有了不同的模樣。
                         </p>
                         <a href="#s09" class="line-link">
                             找到適合你的雪地節奏 <span aria-hidden="true">↓</span>
                         </a>
                     </div>
-
                     <div class="col-lg-5 text-lg-end">
                         <p class="ski-signature">I was there.</p>
                         <p class="ski-signature-note">那片風景裡，也有我的足跡。</p>
@@ -1580,87 +1336,60 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="row g-3 g-lg-4">
                     <div class="col-md-4">
                         <article class="ski-choice">
                             <small>01 / FIRST TIME</small>
                             <h3>第一次，慢慢來</h3>
                             <p>
-                                想試試看滑雪，
-                                也想有時間熟悉裝備與雪地。
-                                把學習放進行程，
-                                不急著一開始就滑得很遠。
+                                想試試看滑雪，也想有時間熟悉裝備與雪地。把學習放進行程，不急著一開始就滑得很遠。
                             </p>
-
                             <button class="choice-toggle" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#skiFirst"
                                 aria-expanded="false" aria-controls="skiFirst">
                                 看安排重點 <span aria-hidden="true">＋</span>
                             </button>
-
                             <div class="collapse" id="skiFirst">
                                 <div class="choice-detail">
-                                    先確認教學語言、入門課程、
-                                    裝備租借與初學區資訊。
-                                    住宿和集合地點之間的移動方式，
-                                    也值得一起考慮。
+                                    先確認教學語言、入門課程、裝備租借與初學區資訊。住宿和集合地點之間的移動方式，也值得一起考慮。
                                 </div>
                             </div>
                         </article>
                     </div>
-
                     <div class="col-md-4">
                         <article class="ski-choice">
                             <small>02 / MORE TIME ON SNOW</small>
                             <h3>想多滑幾趟</h3>
                             <p>
-                                已經有滑行經驗，
-                                想把更多時間留給雪道。
-                                比起排滿周邊景點，
-                                更期待每天再次上山。
+                                已經有滑行經驗，想把更多時間留給雪道。比起排滿周邊景點，更期待每天再次上山。
                             </p>
-
                             <button class="choice-toggle" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#skiMore"
                                 aria-expanded="false" aria-controls="skiMore">
                                 看安排重點 <span aria-hidden="true">＋</span>
                             </button>
-
                             <div class="collapse" id="skiMore">
                                 <div class="choice-detail">
-                                    依自己的程度了解雪道分布、
-                                    雪票方案與住宿交通。
-                                    每天再依天氣、開放狀況和體力，
-                                    調整滑行安排。
+                                    依自己的程度了解雪道分布、雪票方案與住宿交通。每天再依天氣、開放狀況和體力，調整滑行安排。
                                 </div>
                             </div>
                         </article>
                     </div>
-
                     <div class="col-md-4">
                         <article class="ski-choice">
                             <small>03 / A LITTLE OF EVERYTHING</small>
                             <h3>滑雪，也想生活</h3>
                             <p>
-                                想感受雪山，
-                                也想好好吃飯、散步和休息。
-                                滑雪占一部分，
-                                剩下的時間留給山裡日常。
+                                想感受雪山，也想好好吃飯、散步和休息。滑雪占一部分，剩下的時間留給山裡日常。
                             </p>
-
                             <button class="choice-toggle" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#skiSlow"
                                 aria-expanded="false" aria-controls="skiSlow">
                                 看安排重點 <span aria-hidden="true">＋</span>
                             </button>
-
                             <div class="collapse" id="skiSlow">
                                 <div class="choice-detail">
-                                    看看住宿周邊是否有餐廳、
-                                    散步路線或其他活動。
-                                    同行者不滑雪時，
-                                    也能有自己喜歡的安排。
+                                    看看住宿周邊是否有餐廳、散步路線或其他活動。同行者不滑雪時，也能有自己喜歡的安排。
                                 </div>
                             </div>
                         </article>
@@ -1680,62 +1409,46 @@
                             這份時間軸是靈感，可以依課程、天氣與自己的步調調整。
                         </p>
                     </div>
-
                     <div class="col-lg-5 day-photo-column">
                         <div class="photo-frame day-photo">
                             <img src="images/whywego/ski3.jpg" alt="雪山風景">
                         </div>
                     </div>
-
                     <div class="col-lg-7">
                         <div class="timeline">
                             <div class="timeline-item wow animate__fadeInUp" data-wow-delay="0s">
                                 <small>08:00 / MORNING</small>
                                 <h3>吃早餐，看看窗外</h3>
                                 <p>
-                                    出門前確認當天雪場公告與天氣，
-                                    準備裝備，
-                                    再決定今天想怎麼安排。
+                                    出門前確認當天雪場公告與天氣，準備裝備，再決定今天想怎麼安排。
                                 </p>
                             </div>
-
                             <div class="timeline-item wow animate__fadeInUp" data-wow-delay="0.1s">
                                 <small>09:30 / ON THE SNOW</small>
                                 <h3>把早晨留給雪道</h3>
                                 <p>
-                                    參加預約的課程，
-                                    或從適合自己程度的雪道開始，
-                                    慢慢找到今天的節奏。
+                                    參加預約的課程，或從適合自己程度的雪道開始，慢慢找到今天的節奏。
                                 </p>
                             </div>
-
                             <div class="timeline-item wow animate__fadeInUp" data-wow-delay="0.2s">
                                 <small>12:00 / TAKE A BREAK</small>
                                 <h3>一頓熱食，暫停一下</h3>
                                 <p>
-                                    脫下手套、坐下吃飯，
-                                    讓身體暖起來。
-                                    窗外的雪景，也值得多看幾眼。
+                                    脫下手套、坐下吃飯， 讓身體暖起來。窗外的雪景，也值得多看幾眼。
                                 </p>
                             </div>
-
                             <div class="timeline-item wow animate__fadeInUp" data-wow-delay="0.3s">
                                 <small>14:00 / YOUR OWN PACE</small>
                                 <h3>再滑幾趟，或提早休息</h3>
                                 <p>
-                                    依體力與現場狀況做決定。
-                                    今天的收穫，
-                                    不一定需要用滑了幾趟來計算。
+                                    依體力與現場狀況做決定。今天的收穫，不一定需要用滑了幾趟來計算。
                                 </p>
                             </div>
-
                             <div class="timeline-item wow animate__fadeInUp" data-wow-delay="0.4s">
                                 <small>18:00 / AFTER THE SNOW</small>
                                 <h3>回到山裡的日常</h3>
                                 <p>
-                                    整理裝備、吃一頓晚餐，
-                                    聊聊今天最難忘的瞬間。
-                                    然後，好好睡一覺。
+                                    整理裝備、吃一頓晚餐，聊聊今天最難忘的瞬間。然後，好好睡一覺。
                                 </p>
                             </div>
                         </div>
@@ -1751,51 +1464,34 @@
                         <p class="section-kicker">11 / BEFORE YOUR FIRST RUN</p>
                         <h2 class="section-title">第一次上山，<br>先把疑問放下來。</h2>
                         <p class="section-copy">
-                            不需要一開始就懂所有裝備和術語。<br>
-                            先了解幾個會影響安排的問題。
+                            不需要一開始就懂所有裝備和術語。<br>先了解幾個會影響安排的問題。
                         </p>
                     </div>
-
                     <div class="col-lg-6 offset-lg-1">
                         <details class="faq-item">
                             <summary>沒有經驗，行程可以怎麼開始？</summary>
                             <p>
-                                可以先向雪場或滑雪學校了解入門課程，
-                                確認教學語言、集合地點與課程內容。
-                                安排上留出領裝備和熟悉環境的時間。
+                                可以先向雪場或滑雪學校了解入門課程，確認教學語言、集合地點與課程內容。安排上留出領裝備和熟悉環境的時間。
                             </p>
                         </details>
-
                         <details class="faq-item">
                             <summary>裝備需要全部自己買嗎？</summary>
                             <p>
-                                先查詢目的地提供哪些租借項目，
-                                再整理需要自行準備的衣物和配件。
-                                不同業者的套組內容可能不同，
-                                預訂前逐項確認會比較清楚。
+                                先查詢目的地提供哪些租借項目，再整理需要自行準備的衣物和配件。不同業者的套組內容可能不同，預訂前逐項確認會比較清楚。
                             </p>
                         </details>
-
                         <details class="faq-item">
                             <summary>同行的人不滑雪，也能一起去嗎？</summary>
                             <p>
-                                可以把住宿周邊的餐飲、散步、
-                                景觀設施與其他活動一起納入考量。
-                                各自安排一部分時間，
-                                再約好一起吃飯，也是一種玩法。
+                                可以把住宿周邊的餐飲、散步、景觀設施與其他活動一起納入考量。各自安排一部分時間，再約好一起吃飯，也是一種玩法。
                             </p>
                         </details>
-
                         <details class="faq-item">
                             <summary>一定要連續滑好幾天嗎？</summary>
                             <p>
-                                可以依課程安排與體力決定，
-                                中間也能留一天休息或探索附近。
-                                預訂雪票與課程時，
-                                記得確認使用日期及更改規則。
+                                可以依課程安排與體力決定，中間也能留一天休息或探索附近。預訂雪票與課程時，記得確認使用日期及更改規則。
                             </p>
                         </details>
-
                         <p class="faq-note">
                             實際課程、租借內容與設施開放狀況，
                             請以選定雪場及業者公告為準。
@@ -1813,36 +1509,28 @@
                             <img src="images/whywego/town.jpg" alt="冬季的滑雪小鎮" loading="lazy">
                         </div>
                     </div>
-
                     <div class="col-lg-5 offset-lg-1">
                         <p class="section-kicker">12 / BEYOND THE SLOPES</p>
                         <h2 class="section-title">脫下雪鞋以後，<br>還有另一半生活。</h2>
-
                         <div class="mountain-item">
                             <small>01 / STAY</small>
                             <h3>住進喜歡的風景</h3>
                             <p>
-                                選住宿時，也想想自己期待的夜晚。
-                                是熱鬧的小鎮，還是安靜的窗邊？
+                                選住宿時，也想想自己期待的夜晚。是熱鬧的小鎮，還是安靜的窗邊？
                             </p>
                         </div>
-
                         <div class="mountain-item">
                             <small>02 / TASTE</small>
                             <h3>找一頓暖暖的晚餐</h3>
                             <p>
-                                把目光從雪道移到餐桌，
-                                留時間給當地料理和一天的閒聊。
+                                把目光從雪道移到餐桌，留時間給當地料理和一天的閒聊。
                             </p>
                         </div>
-
                         <div class="mountain-item">
                             <small>03 / SLOW DOWN</small>
                             <h3>安排一段空白</h3>
                             <p>
-                                找間咖啡店、走走開放的步道，
-                                或留在住宿休息，
-                                都可以是這幾天的一部分。
+                                找間咖啡店、走走開放的步道，或留在住宿休息，都可以是這幾天的一部分。
                             </p>
                         </div>
                     </div>
@@ -1862,12 +1550,10 @@
                         <p class="section-copy mb-0">點開四季，看看另一種出發的可能。</p>
                     </div>
                 </div>
-
                 <div class="row g-3">
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="season-photo-card">
                             <img src="images/whywego/spring.jpg" alt="春天的櫻花風景" loading="lazy">
-
                             <div class="season-photo-content">
                                 <button class="season-toggle" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#springInfo"
@@ -1878,22 +1564,17 @@
                                     </span>
                                     <span class="season-plus" aria-hidden="true">＋</span>
                                 </button>
-
                                 <div class="collapse" id="springInfo">
                                     <p class="season-description">
-                                        為一場花季、一條步道，
-                                        安排一段慢慢走的時間。
-                                        從戶外重新認識一座城市。
+                                        為一場花季、一條步道，安排一段慢慢走的時間。從戶外重新認識一座城市。
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="season-photo-card">
                             <img src="images/whywego/summer.jpg" alt="夏天的海洋風景" loading="lazy">
-
                             <div class="season-photo-content">
                                 <button class="season-toggle" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#summerInfo"
@@ -1904,22 +1585,17 @@
                                     </span>
                                     <span class="season-plus" aria-hidden="true">＋</span>
                                 </button>
-
                                 <div class="collapse" id="summerInfo">
                                     <p class="season-description">
-                                        想去海邊，也想聽一場戶外演出。
-                                        留一個傍晚，
-                                        給海風、夕陽和喜歡的聲音。
+                                        想去海邊，也想聽一場戶外演出。留一個傍晚，給海風、夕陽和喜歡的聲音。
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="season-photo-card">
                             <img src="images/whywego/autumn.jpg" alt="秋天的金色森林" loading="lazy">
-
                             <div class="season-photo-content">
                                 <button class="season-toggle" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#autumnInfo"
@@ -1930,22 +1606,17 @@
                                     </span>
                                     <span class="season-plus" aria-hidden="true">＋</span>
                                 </button>
-
                                 <div class="collapse" id="autumnInfo">
                                     <p class="season-description">
-                                        沿著變色的街道散步，
-                                        走累了就找間小店坐下。
-                                        讓一天跟著眼前的風景展開。
+                                        沿著變色的街道散步，走累了就找間小店坐下。讓一天跟著眼前的風景展開。
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="season-photo-card">
                             <img src="images/whywego/winter.jpg" alt="冬天的雪白森林" loading="lazy">
-
                             <div class="season-photo-content">
                                 <button class="season-toggle" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#winterInfo"
@@ -1956,12 +1627,9 @@
                                     </span>
                                     <span class="season-plus" aria-hidden="true">＋</span>
                                 </button>
-
                                 <div class="collapse" id="winterInfo">
                                     <p class="season-description">
-                                        為期待已久的一場雪，
-                                        住進山裡幾天。
-                                        在冷空氣與熱飲之間過日子。
+                                        為期待已久的一場雪，住進山裡幾天。在冷空氣與熱飲之間過日子。
                                     </p>
                                 </div>
                             </div>
@@ -1970,7 +1638,6 @@
                 </div>
             </div>
         </section>
-
         <section id="s14" class="chapter">
             <div class="container">
                 <div class="row g-4 g-lg-5">
@@ -1979,11 +1646,9 @@
                         <h2 class="section-title">現在的你，<br>比較想要哪一種？</h2>
                         <p class="section-copy">
                             不用立刻決定去哪個國家。<br>
-                            先選一種期待，
-                            看看可以怎麼開始。
+                            先選一種期待，看看可以怎麼開始。
                         </p>
                     </div>
-
                     <div class="col-lg-6 offset-lg-1">
                         <div class="reason-list" id="reasonAccordion">
                             <div class="reason-item">
@@ -1994,13 +1659,10 @@
                                     <span class="reason-title">想試一件沒做過的事</span>
                                     <span class="reason-plus" aria-hidden="true">＋</span>
                                 </button>
-
                                 <div id="reasonSnow" class="collapse" data-bs-parent="#reasonAccordion">
                                     <div class="reason-detail">
                                         <p>
-                                            可以從一次有指導的入門體驗開始。
-                                            為學習留出時間，
-                                            再安排一點休息和探索。
+                                            可以從一次有指導的入門體驗開始。為學習留出時間，再安排一點休息和探索。
                                         </p>
                                         <a href="#s09" class="line-link">
                                             看看初次滑雪的安排 <span aria-hidden="true">↗</span>
@@ -2021,10 +1683,7 @@
                                 <div id="reasonSea" class="collapse" data-bs-parent="#reasonAccordion">
                                     <div class="reason-detail">
                                         <p>
-                                            把一天留給海岸。
-                                            可以探索水下世界，
-                                            也可以只散步、看海，
-                                            慢慢吃完一頓飯。
+                                            把一天留給海岸。可以探索水下世界，也可以只散步、看海，慢慢吃完一頓飯。
                                         </p>
                                         <a href="#s05" class="line-link">
                                             找一點海洋靈感 <span aria-hidden="true">↗</span>
@@ -2032,22 +1691,18 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="reason-item">
                                 <button class="reason-toggle" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#reasonMusic"
                                     aria-expanded="false" aria-controls="reasonMusic">
                                     <span class="reason-number">03</span>
-                                    <span class="reason-title">想親眼見到喜歡的人與事</span>
+                                    <span class="reason-title">想親自感受期待已久的現場</span>
                                     <span class="reason-plus" aria-hidden="true">＋</span>
                                 </button>
-
                                 <div id="reasonMusic" class="collapse" data-bs-parent="#reasonAccordion">
                                     <div class="reason-detail">
                                         <p>
-                                            先記下期待的演出或活動，
-                                            確認日期後，
-                                            再把附近的街區、美食與散步排進去。
+                                            先記下期待的演出或活動，確認日期後，再把附近的街區、美食與散步排進去。
                                         </p>
                                         <a href="#s06" class="line-link">
                                             為一場演出出發 <span aria-hidden="true">↗</span>
@@ -2068,10 +1723,7 @@
                                 <div id="reasonFood" class="collapse" data-bs-parent="#reasonAccordion">
                                     <div class="reason-detail">
                                         <p>
-                                            選一間一直想吃的小店，
-                                            搭車去另一個街區。
-                                            吃完不急著回家，
-                                            沿著附近的巷子走一走。
+                                            選一間一直想吃的小店，搭車去另一個街區。吃完不急著回家，沿著附近的巷子走一走。
                                         </p>
                                         <a href="#s04" class="line-link">
                                             從一口味道開始 <span aria-hidden="true">↗</span>
